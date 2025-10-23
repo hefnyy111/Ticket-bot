@@ -9,7 +9,7 @@ const create_Ticket = async (Client, Interaction) => {
     switch (Interaction.customId) {
         case 'order': {
             if (st1.get(`TicketUser_${Interaction.user.id}`)) return Interaction.reply({embeds: [new MessageEmbed()
-                .setColor('#4482ff')
+            .setColor('#4482ff')
             .setDescription(`**<a:736257973906571306:1366513669281939547> تحذير: انت لديك تذكرة شراء بالفعل**`)
             ] , components: [embedBut], ephemeral: true })
 
@@ -190,5 +190,6 @@ const create_Ticket = async (Client, Interaction) => {
 
     }
 }
+
 
 module.exports = create_Ticket;
